@@ -46,9 +46,9 @@ class CommentContainer extends Component {
               {/* faker.date.recent(): Third-party cookie will be blocked. Learn more in the Issues tab. */}
               <span className="date">{this.props.date}</span>
             </div>
-            {/* <div className="metadata">
+            <div className="metadata">
               <span className="like">{this.props.like}</span>
-            </div> */}
+            </div>
             <div className="text">{this.props.sentence}</div>
             <ButtonContainer text={"Like"} />
           </div>
