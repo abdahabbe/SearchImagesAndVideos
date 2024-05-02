@@ -6,6 +6,7 @@ import youtube from "./api/youtube";
 import ImageList from "./components/ImageCard";
 import VideoList from "./components/VideoList";
 import MainVideo from "./components/MainVideo";
+import RealTimeClock from "./components/RealtimeClock";
 
 class App extends React.Component {
   state = {
@@ -88,8 +89,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container" style={{ marginTop: 10 }}>
+        <RealTimeClock />
         <SearchBar label={"Image Search"} onSubmit={this.onSearchImg} />
-        <SearchBar label={"Video Search (Youtube)"} onSubmit={this.onSearchYoutube} />
+        <SearchBar
+          label={"Video Search (Youtube)"}
+          onSubmit={this.onSearchYoutube}
+        />
         {this.state.showImg === true && this.renderImage()}
         {this.state.showVid === true && this.renderVideo()}
       </div>
